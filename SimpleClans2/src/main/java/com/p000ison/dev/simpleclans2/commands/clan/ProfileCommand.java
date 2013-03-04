@@ -58,12 +58,7 @@ public class ProfileCommand extends GenericPlayerCommand {
             ChatBlock.sendMessage(player, ChatColor.RED + Language.getTranslation("not.a.member.of.any.clan"));
         } else {
             if (cp.getClan().isVerified()) {
-                Clan clan = cp.getClan();
-                if (clan.isVerified()) {
-                    clan.showClanProfile(player);
-                } else {
-                    ChatBlock.sendMessage(player, ChatColor.RED + Language.getTranslation("clan.is.not.verified"));
-                }
+                clan.showClanProfile(player);
             } else {
                 ChatBlock.sendMessage(player, ChatColor.RED + Language.getTranslation("clan.is.not.verified"));
             }
